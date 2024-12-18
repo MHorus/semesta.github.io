@@ -1,1 +1,1 @@
-# nftblue.github.io
+# semesta.github.io
