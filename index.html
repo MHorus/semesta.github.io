@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Realms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap');
+        body {
+            background-color: #1A1A1A;
+            color: #E6D2B5;
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            overflow: hidden;
+        }
+        #matrix-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .glitch {
+            position: relative;
+            text-shadow: 0.05em 0 0 #B8860B, -0.05em -0.025em 0 #000000;
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% {
+                text-shadow: 0.05em 0 0 #B8860B, -0.05em -0.025em 0 #000000;
+            }
+            15% {
+                text-shadow: 0.05em 0 0 #B8860B, -0.05em -0.025em 0 #000000;
+            }
+            16% {
+                text-shadow: -0.05em -0.025em 0 #B8860B, 0.05em 0.025em 0 #000000;
+            }
+            49% {
+                text-shadow: -0.05em -0.025em 0 #B8860B, 0.05em 0.025em 0 #000000;
+            }
+            50% {
+                text-shadow: 0.05em 0.025em 0 #B8860B, -0.05em 0 0 #000000;
+            }
+            99% {
+                text-shadow: 0.05em 0.025em 0 #B8860B, -0.05em 0 0 #000000;
+            }
+            100% {
+                text-shadow: -0.05em 0 0 #B8860B, 0.05em -0.025em 0 #000000;
+            }
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-black min-h-screen flex items-center justify-center p-6">
+    <canvas id="matrix-background"></canvas>
+    
+    <div class="content-wrapper max-w-2xl text-center space-y-8">
+        <h1 class="text-6xl font-bold glitch" data-text="Cryptic Realms">
+            Cryptic Realms
+        </h1>
+        
+        <div class="bg-black border-2 border-gold-700 p-6 rounded-xl shadow-lg">
+            <p class="text-lg leading-relaxed mb-6" style="color: #E6D2B5;">
+                Between the encrypted whispers of digital shadows and the sacred geometry of Balinese mysticism, 
+                we navigate the liminal spaces where technology meets spiritual consciousness.
+            </p>
+            
+            <div class="grid grid-cols-3 gap-4 text-sm">
+                <div class="bg-black border border-gold-700 p-3 rounded hover:bg-gold-900 transition-colors">
+                    <h3 class="font-bold mb-2" style="color: #B8860B;">Protocol</h3>
+                    <p style="color: #E6D2B5;">Encrypted pathways of resistance</p>
+                </div>
+                
+                <div class="bg-black border border-gold-700 p-3 rounded hover:bg-gold-900 transition-colors">
+                    <h3 class="font-bold mb-2" style="color: #B8860B;">Sanctuary</h3>
+                    <p style="color: #E6D2B5;">Digital temple of anonymity</p>
+                </div>
+                
+                <div class="bg-black border border-gold-700 p-3 rounded hover:bg-gold-900 transition-colors">
+                    <h3 class="font-bold mb-2" style="color: #B8860B;">Emergence</h3>
+                    <p style="color: #E6D2B5;">Transcending technological boundaries</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-xs opacity-50" style="color: #B8860B;">
+            ⌘ Encrypted Transmission • Spiritual Frequency • Nonlocal Consciousness ⌘
+        </footer>
+    </div>
+
+    <script>
+        // Matrix Background Effect
+        const canvas = document.getElementById('matrix-background');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const letters = 'アァカサタナハマヤャラワワヰヱヲンヴヵヶ'.split('');
+        const fontSize = 10;
+        const columns = canvas.width / fontSize;
+
+        const drops = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(26, 26, 26, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#B8860B';
+            ctx.font = `${fontSize}px monospace`;
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+        }
+
+        function animateMatrix() {
+            drawMatrix();
+            requestAnimationFrame(animateMatrix);
+        }
+
+        // Resize canvas when window is resized
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Subtle glitch effect randomization
+        document.addEventListener('DOMContentLoaded', () => {
+            const glitchElements = document.querySelectorAll('.glitch');
+            glitchElements.forEach(el => {
+                el.addEventListener('mouseover', () => {
+                    el.style.textShadow = `${(Math.random() * 0.1).toFixed(3)}em ${(Math.random() * 0.1).toFixed(3)}em 0 #B8860B, ${(-Math.random() * 0.1).toFixed(3)}em ${(-Math.random() * 0.1).toFixed(3)}em 0 #000000`;
+                });
+                el.addEventListener('mouseout', () => {
+                    el.style.textShadow = 'none';
+                });
+            });
+
+            // Start matrix animation
+            animateMatrix();
+        });
+    </script>
+</body>
+</html>
