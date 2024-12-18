@@ -1,186 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptic Realms SEME</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap');
-        body {
-            background-color: #1A1A1A;
-            color: #E6D2B5;
-            font-family: 'Roboto Mono', monospace;
-            margin: 0;
-            overflow: hidden;
-        }
-        #matrix-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-        .glitch {
-            position: relative;
-            text-shadow: 0.05em 0 0 #B8860B, -0.05em -0.025em 0 #000000;
-            animation: glitch-anim 2s infinite linear alternate-reverse;
-        }
-        @keyframes glitch-anim {
-            0% {
-                text-shadow: 0.05em 0 0 #B8860B, -0.05em -0.025em 0 #000000;
-            }
-            15% {
-                text-shadow: 0.05em 0 0 #B8860B, -0.05em -0.025em 0 #000000;
-            }
-            16% {
-                text-shadow: -0.05em -0.025em 0 #B8860B, 0.05em 0.025em 0 #000000;
-            }
-            49% {
-                text-shadow: -0.05em -0.025em 0 #B8860B, 0.05em 0.025em 0 #000000;
-            }
-            50% {
-                text-shadow: 0.05em 0.025em 0 #B8860B, -0.05em 0 0 #000000;
-            }
-            99% {
-                text-shadow: 0.05em 0.025em 0 #B8860B, -0.05em 0 0 #000000;
-            }
-            100% {
-                text-shadow: -0.05em 0 0 #B8860B, 0.05em -0.025em 0 #000000;
-            }
-        }
-        .content-wrapper {
-            position: relative;
-            z-index: 10;
-        }
-    </style>
+	<!-- ========== Meta Tags ========== -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Semesta.one ">
+	<meta name="keywords" content="Semesta NFT">
+	<meta name="author" content="semesta.one">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+	<!-- Fonts Icon CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/css/et-line.css" rel="stylesheet">
+	<link href="assets/css/ionicons.min.css" rel="stylesheet">
+	<!-- Carousel CSS -->
+	<link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+	<link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/ack.css">
+	<link rel="stylesheet" href="assets/css/timeline.css">
+	<link rel="stylesheet" href="assets/css/particlesz.css">
+	<!-- Custom styles for this template -->
+	<link href="./assets/css/main.css" rel="stylesheet">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+		<link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
+	<style>
+		.bgg {
+			position: relative;
+			background: #FFFFFF;
+			background: -webkit-radial-gradient(center, #FFFFFF, #282828);
+			background: -moz-radial-gradient(center, #FFFFFF, #282828);
+			background: radial-gradient(ellipse at center, #FFFFFF, #282828);
+		}
+		.bg-black0 {
+		background:#000 !important;
+ 
+}
+
+	</style>
+	<link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/flpblack.css">
+	<title>Semesta.nft Semesta NFT Bali Jakarta</title>
 </head>
-<body class="bg-black min-h-screen flex items-center justify-center p-6">
-    <canvas id="matrix-background"></canvas>
-    
-    <div class="content-wrapper max-w-2xl text-center space-y-8">
-        <h1 class="text-6xl font-bold glitch" data-text="Cryptic Realms">
-            Cryptic Realms
-        </h1>
-        
-        <div class="bg-black border-2 border-gold-700 p-6 rounded-xl shadow-lg">
-            <p class="text-lg leading-relaxed mb-6" style="color: #E6D2B5;">
-                Between the encrypted whispers of digital shadows and the sacred geometry of Balinese mysticism, 
-                we navigate the liminal spaces where technology meets spiritual consciousness.
-            </p>
-            
-            <div class="grid grid-cols-3 gap-4 text-sm">
-                <div class="bg-black border border-gold-700 p-3 rounded hover:bg-gold-900 transition-colors">
-                    <h3 class="font-bold mb-2" style="color: #B8860B;">Protocol</h3>
-                    <p style="color: #E6D2B5;">Encrypted pathways of resistance</p>
-                </div>
-                
-                <div class="bg-black border border-gold-700 p-3 rounded hover:bg-gold-900 transition-colors">
-                    <h3 class="font-bold mb-2" style="color: #B8860B;">Sanctuary</h3>
-                    <p style="color: #E6D2B5;">Digital temple of anonymity</p>
-                </div>
-                
-                <div class="bg-black border border-gold-700 p-3 rounded hover:bg-gold-900 transition-colors">
-                    <h3 class="font-bold mb-2" style="color: #B8860B;">Emergence</h3>
-                    <p style="color: #E6D2B5;">Transcending technological boundaries</p>
-                </div>
-            </div>
-        </div>
-        
-        <footer class="text-xs opacity-50" style="color: #B8860B;">
-            ⌘ Encrypted Transmission • Spiritual Frequency • Nonlocal Consciousness ⌘
-        </footer>
-    </div>
 
-    <script>
-        // Matrix Background Effect
-        const canvas = document.getElementById('matrix-background');
-        const ctx = canvas.getContext('2d');
+<body>
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+	<header class="bg-black0">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black0">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="https://semesta.one">Semesta.one</a>
+			  <button class="navbar-toggler justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
 
-        const letters = 'アァカサタナハマヤャラワワヰヱヲンヴヵヶ'.split('');
-        const fontSize = 10;
-        const columns = canvas.width / fontSize;
+				  <li class="nav-item">
+					<a class="nav-link" href="https://semesta.one/#collection">Drop</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="https://semesta.one/vr" target="_blank">VR</a>
+				</li>
+				  <li class="nav-item">
+					<a class="nav-link" href="https://semesta.one/project.html">Project</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="https://semesta.one/roadmap.html">Roadmap</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="https://twitter.com/SemestaArt" target="_blank"><i class="bi bi-twitter"></i></a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="https://discord.gg/U8BTuR8mCJ" target="_blank"><i class="bi bi-discord"></i></a>
+				  </li>
+				</ul>
+				<span class="navbar-text"></span>
+			  </div>
+			</div>
+		  </nav>
+		</header>
+<section class="bg-black0 p-3" id="top">
+	<div class="container">
+		<div class="row gy-1">
+			<div class="display-6 text-center" id="#">SEMESTa.one NFT COLLECTION 2022</div>
+	
+		<img src="assets/img/semesat_web_header707.jpg" alt="" class="img-fluid col-7 mx-auto">
+			<div class="col-12">
+				<iframe class="" title="" name="htmlComp-iframe" width="100%" height="500px" data-src="" src="https://voxels.com/play?coords=E@691W,700S"></iframe>
+				<!-- https://voxels.com/play?coords=NE@221W,464S -->
+			</div>
+		</div>
+		<div class="mx-auto text-center">
+			<div class="lead p-3">"WASD" to move "F" to fly . "esc" to escap </div>
+			<a class="btn btn-success btn-md text-center bg-orange" href="https://voxels.com/play?coords=E@691W,700S"  target="_blank">visit vr gallery</a> <p></p></div>
+	</div>
+</section>
+<section class="bg-black p-3">
+		<div class="container">
+		<!-- <div class="row"><a role="button" href="https://twitter.com/semestadao.eth" target="_blank" class="btn btn-outline-dark btn-sm">Twitter</a>	</div> -->
+	</div>
+</section>
+<section class="bg-black p-3" id="collection">
+	<div class="container">
 
-        // const drops = [];
-        // for (let x = 0; x < columns; x++) {
-        //     drops[x] = 1;
-        // }
+			<div class="row bg-black0 p-2 g-3 gy-3 justify-content-center">
+				<div class="col-12 text-center"><h2 class="display-6 silver">707  Goddess</h2></div>
+<div class="col-md-8 mx-auto text-center">The 707 Genesis Project NFT created as the beginning of creations and conceptual celebration of nusantara’s cultural art and heritages researches. Our team in Lentera Nusantara develop high-level movie and game IP concepts into scalable worlds wherein a multitude of meaningful moments can unfold over all modern media channels.<br>
+	This exclusive Genesis 707 series art community will receive an exclusive opportunity to access the creation journey towards our future metaverse content. Using an innovative 360° approach to creative development, the future release arts and projects are equipped for lateral movement into any medium under the sun – from games to merchandising.<br><br>
+The NFT Mint Date/time will be annouced shortly expected early March. 707 NFT Can only be minted on semesta.one.  Our team will never ask you for money or send link in DM. Be safe at all time.
+<br><br>
+<div class="col-12 text-center"><h2 class="display-5 silver">Partners </h2>
+<div class="lead"></div></div> <a href="https://lentera-nusantara.com/" target="_blank"> <img src="assets/img/cropped-Lentera-studio-white-1.webp" class="col-4 col-md-4 mx-auto" alt=""></a> | <a href="https://nft.black" target="_blank"> <img src="assets/img/nftblack.png" class="col-4 col-md-4 mx-auto" alt=""></a>
+<div class="p-4"><a href="https://discord.gg/U8BTuR8mCJ" class="lead white" target="_blank"> Join our Discord <i class="bi bi-discord"></i> </a> | 
+	<a href="https://twitter.com/SemestaArt" class="lead white"  target="_blank"> Twitter  @SemestaArt </a><i class="bi bi-twitter"></i></div></div>
 
-        // function drawMatrix() {
-        //     ctx.fillStyle = 'rgba(26, 26, 26, 0.05)';
-        //     ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-        //     ctx.fillStyle = '#B8860B';
-        //     ctx.font = `${fontSize}px monospace`;
-            
-        //     for (let i = 0; i < drops.length; i++) {
-        //         const text = letters[Math.floor(Math.random() * letters.length)];
-        //         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
-        //         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        //             drops[i] = 0;
-        //         }
-                
-        //         drops[i] += 0.25;
-        //     }
-        // }
+<div class="row">
 
-        const drops = [];
-        for (let x = 0; x < columns; x++) {
-            drops[x] = canvas.height; // Start from the bottom of the screen
-        }
+					<div class="col-md-4 text-center"><img src="assets/img/musica_s.png" alt="" class="img-fluid p-2"></div>
+					<div class="col-md-4 text-center"><img src="assets/img/arithmetica_s.png" alt="" class="img-fluid p-2 "></div>
+					<div class="col-md-4 text-center"><img src="assets/img/dialectica_s.png" alt="" class="img-fluid p-2"></div>
+					<div class="col-md-4 text-center"><img src="assets/img/geometria.png" alt="" class="img-fluid p-2"></div>
+					<div class="col-md-4 text-center"><img src="assets/img/grammatica_s.png" alt="" class="img-fluid p-2"></div>
+					<div class="col-md-4 text-center"><img src="assets/img/rhetorica_s.png" alt="" class="img-fluid p-2"></div>
+					<div class="col-md-4 text-center"><img src="assets/img/707_s.png" alt="" class="img-fluid p-2"></div>
 
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(26, 26, 26, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            ctx.fillStyle = '#B8860B';
-            ctx.font = `${fontSize}px monospace`;
-            
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters[Math.floor(Math.random() * letters.length)];
-                ctx.fillText(text, i * fontSize, drops[i]);
-                
-                // When character reaches the top, reset to bottom
-                if (drops[i] < 0 && Math.random() > 0.99) {
-                    drops[i] = canvas.height;
-                }
-                
-                drops[i]-- ; // Move upwards slowly
-            }
-        }
+				</div>
+			</div>
+		</div>
+</section>
+<section>
+	<div class="cointainer p-4">
+		<div class="row"><p class="block text-center p-3"><a href="#top" class="display-6">Back To Top  .</a></p>
+		</div>
 
-        function animateMatrix() {
-            drawMatrix();
-            requestAnimationFrame(animateMatrix);
-        }
+		<div class="row">
+		
+	<div class="col-md-2 mx-auto">
+			<ul class="list-group list-group-horizontal" >
+			<li class="list-group-item">
+				<a class="" href="https://twitter.com/SemestaArt" target="_blank"><i class="bi bi-twitter " style="font-size: 2rem; color: light;"></i></a>
+			  </li>
+			  <li class="list-group-item">
+				<a class="" href="#" target="_blank"><i class="bi bi-instagram" style="font-size: 2rem; color: light;"></i></a>
+			  </li>
+			  <li class="list-group-item">
+				<a class="" href="https://discord.gg/U8BTuR8mCJ" target="_blank"><i class="bi bi-discord" style="font-size: 2rem; color: light;"></i></a>
+			  </li>
+			  <li class="list-group-item">
+				<a class="" href="#" target="_blank"><i class="bi bi-youtube" style="font-size: 2rem; color: light;"></i></a>
+			  </li>
+			</ul>
+		</div>
+	</div>
+		</div>
 
-        // Resize canvas when window is resized
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
+</section>
+<section>
+		<div class="container">
+			<!-- <div class="row">
+				<div class="col-12 m-3">
+					<h2>Speakers<span class="text-danger"></span> </h2>
+				</div>
+			</div> -->
 
-        // Subtle glitch effect randomization
-        document.addEventListener('DOMContentLoaded', () => {
-            const glitchElements = document.querySelectorAll('.glitch');
-            glitchElements.forEach(el => {
-                el.addEventListener('mouseover', () => {
-                    el.style.textShadow = `${(Math.random() * 0.1).toFixed(3)}em ${(Math.random() * 0.1).toFixed(3)}em 0 #B8860B, ${(-Math.random() * 0.1).toFixed(3)}em ${(-Math.random() * 0.1).toFixed(3)}em 0 #000000`;
-                });
-                el.addEventListener('mouseout', () => {
-                    el.style.textShadow = 'none';
-                });
-            });
+		</div>
+</section>
 
-            // Start matrix animation
-            animateMatrix();
-        });
-    </script>
+
+
+	<!-- jquery -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	<script src="assets/js/waypoints.min.js"></script>
+	<!--slick carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!--parallax -->
+	<script src="assets/js/parallax.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<!-- Custom js -->
+	<script src="assets/js/main.js"></script>
+	<script>
+		function handleTickInit(tick) {
+	
+			// uncomment to set labels to different language
+			/*
+			var locale = {
+				YEAR_PLURAL: 'Jaren',
+				YEAR_SINGULAR: 'Jaar',
+				MONTH_PLURAL: 'Maanden',
+				MONTH_SINGULAR: 'Maand',
+				WEEK_PLURAL: 'Weken',
+				WEEK_SINGULAR: 'Week',
+				DAY_PLURAL: 'Dagen',
+				DAY_SINGULAR: 'Dag',
+				HOUR_PLURAL: 'Uren',
+				HOUR_SINGULAR: 'Uur',
+				MINUTE_PLURAL: 'Minuten',
+				MINUTE_SINGULAR: 'Minuut',
+				SECOND_PLURAL: 'Seconden',
+				SECOND_SINGULAR: 'Seconde',
+				MILLISECOND_PLURAL: 'Milliseconden',
+				MILLISECOND_SINGULAR: 'Milliseconde'
+			};
+	
+			for (var key in locale) {
+				if (!locale.hasOwnProperty(key)) { continue; }
+				tick.setConstant(key, locale[key]);
+			}
+			*/
+	
+			// format of due date is ISO8601
+			// https://en.wikipedia.org/wiki/ISO_8601
+	
+			// '2018-01-31T12:00:00'        to count down to the 31st of January 2018 at 12 o'clock
+			// '2019'                       to count down to 2019
+			// '2018-01-15T10:00:00+01:00'  to count down to the 15th of January 2018 at 10 o'clock in timezone GMT+1
+	
+			// create the countdown counter
+			var counter = Tick.count.down('2021-12-01T00:00:00+01:00');
+	
+			counter.onupdate = function(value) {
+			  tick.value = value;
+			};
+	
+			counter.onended = function() {
+				// redirect, uncomment the next line
+				// window.location = 'my-location.html'
+	
+				// hide counter, uncomment the next line
+				// tick.root.style.display = 'none';
+	
+				// show message, uncomment the next line
+				// document.querySelector('.tick-onended-message').style.display = '';
+			};
+		}
+	</script>
+	
+	<div class="tick-onended-message" style="display:none">
+		<p>Time's up</p>
+	</div>
+	
+	<script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
 </body>
+
 </html>
