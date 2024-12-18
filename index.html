@@ -106,9 +106,33 @@
         const fontSize = 10;
         const columns = canvas.width / fontSize;
 
+        // const drops = [];
+        // for (let x = 0; x < columns; x++) {
+        //     drops[x] = 1;
+        // }
+
+        // function drawMatrix() {
+        //     ctx.fillStyle = 'rgba(26, 26, 26, 0.05)';
+        //     ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+        //     ctx.fillStyle = '#B8860B';
+        //     ctx.font = `${fontSize}px monospace`;
+            
+        //     for (let i = 0; i < drops.length; i++) {
+        //         const text = letters[Math.floor(Math.random() * letters.length)];
+        //         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+        //         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        //             drops[i] = 0;
+        //         }
+                
+        //         drops[i] += 0.25;
+        //     }
+        // }
+
         const drops = [];
         for (let x = 0; x < columns; x++) {
-            drops[x] = 1;
+            drops[x] = canvas.height; // Start from the bottom of the screen
         }
 
         function drawMatrix() {
@@ -120,13 +144,14 @@
             
             for (let i = 0; i < drops.length; i++) {
                 const text = letters[Math.floor(Math.random() * letters.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                ctx.fillText(text, i * fontSize, drops[i]);
                 
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
+                // When character reaches the top, reset to bottom
+                if (drops[i] < 0 && Math.random() > 0.99) {
+                    drops[i] = canvas.height;
                 }
                 
-                drops[i] += 2.5;
+                drops[i]-- ; // Move upwards slowly
             }
         }
 
