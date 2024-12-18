@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    background-color: #000; /* Black background */
+    color: #f5f5dc; /* Beige text */
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #ffd700; /* Gold links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #daa520; /* Darker gold on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000; /* Black background */
+    border-bottom: 2px solid #ffd700; /* Gold border */
+}
+
+.nav-link {
+    color: #f5f5dc; /* Beige text */
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Gold on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 2rem 0;
+}
+
+.bg-black {
+    background-color: #000; /* Black background */
+    color: #f5f5dc; /* Beige text */
+}
+
+.bg-gold {
+    background-color: #ffd700; /* Gold background */
+    color: #000; /* Black text */
+}
+
+.bg-beige {
+    background-color: #f5f5dc; /* Beige background */
+    color: #000; /* Black text */
+}
+
+/* Button Styles */
+.btn-gold {
+    background-color: #ffd700; /* Gold background */
+    color: #000; /* Black text */
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: #daa520; /* Darker gold on hover */
+}
+
+/* Additional Styles */
+.display-6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.white {
+    color: #fff;
+}
+
+.white:hover {
+    color: #ccc;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ffd700; /* Gold line */
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffd700; /* Gold circle */
+    margin-left: -10px;
+    top: 0;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 1rem;
+    background: #000; /* Black background */
+    color: #f5f5dc; /* Beige text */
+    border: 1px solid #ffd700; /* Gold border */
+    border-radius: 8px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: 55%;
+}
+
+.timeline-content h4 {
+    margin-top: 0;
+    color: #ffd700; /* Gold text */
+}
